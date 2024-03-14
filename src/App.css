@@ -1,9 +1,23 @@
 /* Add styling for your page here */
 
 .App {
+    display: flex;
+    flex-direction: column;
 
+    justify-content: center;
+    align-items: center;
 }
 
-.BakeryItem {
-  
+.bakeryItem {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 2.5rem;
+}
+
+.bakeryPic {
+    width: 50%;
 }
