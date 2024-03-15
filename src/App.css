@@ -19,5 +19,10 @@
 }
 
 .bakeryPic {
-    width: 50%;
+    width: 500px;
+    height: 500px;
+}
+
+.bakeryItemContainer {
+    background-color: #F0DEEA;
 }

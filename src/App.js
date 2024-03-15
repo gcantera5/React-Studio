@@ -22,11 +22,10 @@ function App() {
   };
 
   useEffect(() => {
-    // Loads data
-    loadData();
-  }, [cartItems]); // updates cart items 
+    loadData(); // loads data
+  }, [cartItems]);  
 
-  // Add item to our cart
+  // Add items
   const addToCart = (price, name) => {
       setTotalPrice((prevTotal) => prevTotal + price);
       setCartItems((prevCart) => [...prevCart, name]);
@@ -36,9 +35,13 @@ function App() {
     <div className="App">
       <h1>Levi's Bakery</h1> 
 
-      {bakeryItems.map((item, index) => (
-                <BakeryItem key={index} item={item} addToCart={addToCart} />
-            ))}
+      <div className="bakeryItemContainer">
+                {bakeryItems.map((item, index) => (
+                    <div key={index} className="bakeryItem">
+                        <BakeryItem item={item} addToCart={addToCart} />
+                    </div>
+                ))}
+            </div>
       <div>
           <h2>Cart</h2>
           Your Total: ${totalPrice}
